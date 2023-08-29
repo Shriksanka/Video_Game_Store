@@ -2,32 +2,55 @@
 
 ![Project Image](Diagram_encji.JPG)
 
-This PL/SQL project involves the creation of a database schema for a video game store. It includes the definition of tables for various entities such as game categories, game genres, developers, games, orders, customers, employees, job positions, and more. The project also features data insertion scripts and triggers to enforce certain business rules and behaviors within the database.
+## Table of Contents
 
-## Project Components
+- [Project Description](#project-description)
+- [Table Structure](#tabel-structure)
+- [Sample Queries](#sample-queries)
+- [Triggers](#triggers)
+- [Contributor](#contributor)
+- [License](#license)
 
-- `Generacja_tablic.sql`: This file contains the SQL statements to create the necessary database tables for entities like game categories, game genres, developers, games, orders, customers, employees, and job positions.
+## Project Description
 
-- `Wrzucanie_danych.sql`: In this file, data insertion scripts are provided to populate the tables with sample data.
+This SQL project involves the creation of a database schema for a video game store. It includes the definition of tables for various entities such as game categories, game genres, developers, games, orders, customers, employees, job positions, and more. The project also features data insertion scripts and triggers to enforce certain business rules and behaviors within the database.
 
-- `Faza_2_SELECT.sql`: This file contains various SQL queries that retrieve information from the database using JOINs, aggregate functions, subqueries, and correlated subqueries. These queries retrieve game and order-related information.
+## Table Structure
 
-- `Faza_3_triggery.sql`: The file includes SQL trigger definitions to enforce certain business logic. It defines triggers for scenarios like setting default values, preventing negative values, and reacting to changes in the database.
+The project defines the following tables and their corresponding attributes:
 
-## Usage
+- Kategoria_Gry (Game Category)
+- Rodzaj_Gry (Game Genre)
+- Deweloper (Developer)
+- Gry (Games)
+- Wydawca (Publisher)
+- Zamowienie_Gry (Order Games)
+- Zamowienie (Order)
+- Klient (Customer)
+- Pracownik (Employee)
+- Stanowisko (Job Position)
 
-1. Create the database schema by executing the statements in `Generacja_tablic.sql`.
+## Data Insertion Scripts
 
-2. Populate the tables with sample data using the scripts in `Wrzucanie_danych.sql`.
+The project includes data insertion scripts for populating the tables with sample data.
 
-3. Explore the database by running the queries in `Faza_2_SELECT.sql`.
+## Triggers
 
-4. Observe the triggers' behavior by executing the statements in `Faza_3_triggery.sql`.
+Triggers are implemented to enforce business rules and maintain data integrity:
 
-## Contributing
+- A BEFORE INSERT trigger for the "Kategoria_Gry" table ensures that each game category's name is set to "Nieznana kategoria" if not provided.
+- A BEFORE UPDATE trigger for the "Gry" table prevents the price of a game from being negative.
+- An AFTER INSERT trigger for the "Zamowienie" table displays information about newly created orders.
+- An AFTER DELETE trigger for the "Deweloper" table updates related game records by setting their developer ID to NULL.
 
-If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with your changes.
+## Contributors
+
+- Valerii Andriushchenko
+
+Feel free to contribute to this project by submitting pull requests or reporting issues.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License.
+
+For detailed SQL scripts and implementation, refer to the SQL script files in the repository.
