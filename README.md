@@ -1,5 +1,7 @@
 # PL/SQL Project: Video Game Store Database
 
+![Project Image](Diagram_encji.JPG)
+
 This PL/SQL project involves the creation of a database schema for a video game store. It includes the definition of tables for various entities such as game categories, game genres, developers, games, orders, customers, employees, job positions, and more. The project also features data insertion scripts and triggers to enforce certain business rules and behaviors within the database.
 
 ## Project Components
